@@ -1,20 +1,21 @@
-document.getElementById('prescription-form').addEventListener('submit', function (e) {
-  e.preventDefault();
+<script>
+document.getElementById('prescription-form').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  const contact = document.getElementById('contact').value.trim();
-  const feedback = document.getElementById('feedback');
+      const contact = document.getElementById('contact').value;
+      const feedback = document.getElementById('feedback');
 
-  if (!contact) {
-    feedback.textContent = 'Please enter your phone number.';
-    feedback.style.color = 'red';
-    return;
-  }
+      if (!contact) {
+        feedback.innerText = "Please enter your phone number.";
+        feedback.style.color = "red";
+        return;
+      }
 
-  const message = `Hi! I want to place an order.%0AMy phone number: ${contact}%0APrescription is attached below 👇`;
-
-  const whatsappUrl = `https://wa.me/919403143644?text=${message}`;
-  window.open(whatsappUrl, '_blank');
-
-  feedback.textContent = 'Redirecting to WhatsApp...';
-  feedback.style.color = 'green';
-});
+      const encodedMsg = encodeURIComponent(
+        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription will be shared on WhatsApp.`
+      );
+      const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
+      window.open(whatsappURL, "_blank");
+      feedback.innerText = "Opening WhatsApp...";
+      feedback.style.color = "green";
+    });
