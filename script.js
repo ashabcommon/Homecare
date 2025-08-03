@@ -12,7 +12,7 @@ document.getElementById('prescription-form').addEventListener('submit', function
       }
 
       const encodedMsg = encodeURIComponent(
-        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription will be shared on WhatsApp.`
+        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription is attached herewith`
       );
       const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
       window.open(whatsappURL, "_blank");
