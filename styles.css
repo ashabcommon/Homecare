@@ -10,12 +10,12 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
-h1, h2 { color: #006400; }
+h1, h2 { color: #00640; }
 
 /* Hero */
 .hero {
   background: #2a7a2a;
-  color:white;
+  color:White;
   text-align:center;
   padding: 4rem 1rem;
 }
