@@ -50,11 +50,33 @@
     <form id="prescription-form">
       <input type="text" name="contact" id="contact" placeholder="Your phone number" required />
       <button type="submit">Open WhatsApp</button>
-</form>
+    </form>
     <div id="feedback"></div>
-  </section>
+  </div>
+<script>
+    document.getElementById('prescription-form').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  <section id="contact" class="container contact">
+      const contact = document.getElementById('contact').value;
+      const feedback = document.getElementById('feedback');
+
+      if (!contact) {
+        feedback.innerText = "Please enter your phone number.";
+        feedback.style.color = "red";
+        return;
+      }
+
+      const encodedMsg = encodeURIComponent(
+        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription will be shared on WhatsApp.`
+      );
+      const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
+      window.open(whatsappURL, "_blank");
+      feedback.innerText = "Opening WhatsApp...";
+      feedback.style.color = "green";
+    });
+  </script>
+
+    <section id="contact" class="container contact">
     <h2>Contact Us</h2>
     <p>Homecare Pharmacy<br>GF, Shop No.2, Baitul Aman Apartment<br>Opposite Dawatul Iman Markaz, Solapur<br></p>
     <iframe src="https://www.google.com/maps?q=HomeCare+Pharmacy,+Solapur&output=embed" loading="lazy"></iframe>
