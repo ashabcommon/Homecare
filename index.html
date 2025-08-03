@@ -2,120 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homecare Pharmacy</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-    .whatsapp-float:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
+  <meta name="description" content="Affordable generic medicines & free home delivery in Solapur." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800">
-  
-<!-- 🟢 Free Delivery Banner -->
-  <div style="background-color: #28a745; color: #fff; text-align: center; padding: 12px; font-size: 16px; font-weight: bold;">
-    Enjoy Free Delivery on every Order! Minimum Order Value: ₹1000.
-    <p class="text-lg text-White-600 flash">Limited Time Offer!</p>
-
-  </div>
-  
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center items-center">
-      <div class="flex items-center space-x-3">
-        <img src="HOMECARE LOGO WITHOUT TEXT.png" alt="Homecare Pharmacy Logo" class="h-20 w-20" />
-        <h1 class="text-2xl font-bold text-green-700">Homecare Pharmacy</h1>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Homecare Pharmacy</h1>
+      <p>Caring for You like Family — Quality medicines, delivered with compassion.</p>
+      <div class="btn-group">
+        <a href="#services" class="btn primary">Our Services</a>
+        <a href="#order" class="btn secondary">Order Now</a>
       </div>
     </div>
-    <nav class="text-center mt-2">
-      <a href="#about" class="mx-3 text-gray-700 hover:text-green-600">About</a>
-      <a href="#services" class="mx-3 text-gray-700 hover:text-green-600">Services</a>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-green-100 py-12 text-center">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-3xl font-bold text-green-800 mb-4">Affordable Medicine at Your Doorstep</h2>
-      <p class="mb-6 text-gray-700">We provide Genuine Medicines, Health Products, and Home Delivery with care and trust.</p>
-    </div>
+  <div class="banner">🎉 Enjoy Free Delivery on every Order! Minimum Order ₹1000</div>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>Located in Solapur near Dawatul Iman Markaz, we believe healthcare should be affordable and accessible to every home. We’re your neighborhood pharmacy delivering genuine medicines and health products with care and trust. Our mission: to provide compassionate care at your doorstep. :contentReference[oaicite:3]{index=3}</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-10 px-4 max-w-4xl mx-auto">
-    <h3 class="text-2xl font-bold mb-4 text-green-700">About Us</h3>
-    <p class="text-gray-700">
-      In the heart of Solapur, near Dawatul Iman Markaz, a small idea bloomed — to make medicines more affordable and healthcare more accessible for every home.💊🏡
-      That idea became Genericart Homecare Pharmacy – your neighborhood pharmacy with a heart.
-      We saw families struggle with high medical bills, elderly patients unable to visit stores, and loved ones searching endlessly for trusted medicines. 
-      So, we stepped in – not just as a pharmacy, but as a care partner, "Caring for You like Family".
-      Homecare Pharmacy is your neighborhood pharmacy focused on delivering Quality medicines and health products with compassion. Our mission is to make 
-      healthcare accessible and affordable for every home.
-    </p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-10 bg-gray-100 px-4">
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-2xl font-bold mb-6 text-green-700">Our Services</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="font-bold mb-2 text-green-600">Free Home Delivery</h4>
-          <p>Quick and safe delivery of medicines to your doorstep.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="font-bold mb-2 text-green-600">Genuine Medicines with Quality Certifcate</h4>
-          <p>We ensure all our products are from verified manufacturers. We are the First company to offer the "Quality Certificate".</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="font-bold mb-2 text-green-600">Health Products</h4>
-          <p>Wide range of health and wellness essentials available.</p>
-        </div>
+  <section id="services" class="container services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Free Home Delivery</h3>
+        <p>Quick and safe delivery of medicines to your doorstep.</p>
+      </div>
+      <div class="card">
+        <h3>Genuine Medicines</h3>
+        <p>All products are certified and from verified manufacturers.</p>
+      </div>
+      <div class="card">
+        <h3>Health & Wellness</h3>
+        <p>Wide range of wellness essentials available.</p>
       </div>
     </div>
   </section>
 
-  <!-- Order Section -->
- <br> 
-<h2 class="text-3xl font-bold text-green-600 mb-4 text-center">Need Help Ordering?
-  <br>
-  Press WhatsApp Button & Upload Your Prescription
-  <br>
-  We will Call You Back.</h2>
-<br>
-  <!-- Google Maps -->
-      <div class="flex justify-center my-8">
-        <iframe 
-          class="w-full max-w-3xl h-64 rounded shadow"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.5602540322093!2d75.9099751!3d17.6709746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5dbdca33f6be1%3A0xd7a59fffa4661d46!2sHOMECARE%20PHARMACY!5e0!3m2!1sen!2sin!4v1746725162602!5m2!1sen!2sin" 
-          width="50%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
+  <section id="order" class="container order">
+    <h2>Place an Order</h2>
+    <p>Upload prescription and our team will call you back.</p>
+    <form id="prescription-form">
+      <input type="file" name="prescription" accept=".jpg,.png,.pdf" required />
+      <input type="text" name="contact" placeholder="Your phone number" required />
+      <button type="submit" class="btn primary">Submit</button>
+    </form>
+    <div id="feedback"></div>
   </section>
 
-  <!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919403143644?text=Hi, I am from Homecare Pharmacy. How can I help you?" 
-   style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-        alt="Chat on WhatsApp" width="60px" />
-</a>
+  <section id="contact" class="container contact">
+    <h2>Contact Us</h2>
+    <p>Homecare Pharmacy<br>Near Dawatul Iman Markaz, Solapur<br>Phone: +91‑9403143644</p>
+    <iframe src="https://www.google.com/maps?q=HomeCare+Pharmacy,+Solapur&output=embed" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Homecare Pharmacy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
   <!-- Footer -->
   <footer class="bg-green-700 text-white text-center py-4 mt-10">
   <p>&copy; 2025 Homecare Pharmacy. All rights reserved. 
