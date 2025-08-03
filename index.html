@@ -46,10 +46,10 @@
   </section>
   
   <section id="order" class="container order">
-    <p>Please upload your prescription on WhatsApp and our team will call you shortly. Thank you.</p>
+    <p>Please upload your prescription on WhatsApp.</p>
     <form id="prescription-form">
       <input type="text" name="contact" id="contact" placeholder="Your phone number" required />
-      <button type="submit">Open WhatsApp</button>
+      <button type="submit">Submit on WhatsApp</button>
     </form>
     <div id="feedback"></div>
   </div>
@@ -67,11 +67,11 @@
       }
 
       const encodedMsg = encodeURIComponent(
-        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription will be shared on WhatsApp.`
+        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription is attached herewith`
       );
       const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
       window.open(whatsappURL, "_blank");
-      feedback.innerText = "Opening WhatsApp...";
+      feedback.innerText = "Thank you uploading. We will call you shortly...";
       feedback.style.color = "green";
     });
   </script>
