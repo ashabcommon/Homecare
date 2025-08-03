@@ -45,16 +45,37 @@
     </div>
   </section>
 
-  <section id="order" class="container order">
-  <h2>Place an Order</h2>
-  <p>Upload prescription and we will contact you shortly on WhatsApp.</p>
-  <form id="prescription-form">
-    <input type="file" id="prescription" accept=".jpg,.png,.pdf" />
-    <input type="text" id="contact" placeholder="Your phone number" required />
-    <button type="submit" class="btn primary">Submit via WhatsApp</button>
-  </form>
-  <div id="feedback"></div>
-</section>
+  <div class="container">
+    <h2>Please upload your prescription on WhatsApp</h2>
+    <form id="prescription-form">
+      <input type="text" name="contact" id="contact" placeholder="Your phone number" required />
+      <button type="submit">Open WhatsApp</button>
+    </form>
+    <div id="feedback"></div>
+  </div>
+
+  <script>
+    document.getElementById('prescription-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const contact = document.getElementById('contact').value;
+      const feedback = document.getElementById('feedback');
+
+      if (!contact) {
+        feedback.innerText = "Please enter your phone number.";
+        feedback.style.color = "red";
+        return;
+      }
+
+      const encodedMsg = encodeURIComponent(
+        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription will be shared on WhatsApp.`
+      );
+      const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
+      window.open(whatsappURL, "_blank");
+      feedback.innerText = "Opening WhatsApp...";
+      feedback.style.color = "green";
+    });
+  </script>
 
     </form>
     <div id="feedback"></div>
