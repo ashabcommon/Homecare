@@ -26,7 +26,7 @@ h1, h2 { color: #00650; }
   text-decoration:none;
 }
 .hero .btn.primary { background:#fff; color:#006400; }
-.hero .btn.secondary { background:transparent; color:#fff; border:2px solid #fff; }
+.hero .btn.primary { background:transparent; color:#fff; border:2px solid #fff; }
 
 /* Banner */
 .banner {
