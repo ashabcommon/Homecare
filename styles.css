@@ -5,14 +5,11 @@ body {
   line-height: 1.6;
   color: #333;
 }
-    .container {
-      width: 80%; /* 80% of parent width */
-      max-width: 1200px; /* Maximum width */
-    }
-    p {
-      font-size: 1.2rem; /* Relative to root font size */
-    }
-
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
 h1, h2 { color: #00650; }
 
 /* Hero */
@@ -29,8 +26,7 @@ h1, h2 { color: #00650; }
   text-decoration:none;
 }
 .hero .btn.primary { background:#fff; color:#006400; }
-.hero .btn.primary { background:transparent; color:#fff; border:2px solid #fff; }
-
+.hero .btn.secondary { background:#fff; color:#006400; }
 /* Banner */
 .banner {
   background:#d4edda;
