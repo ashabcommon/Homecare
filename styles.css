@@ -5,11 +5,14 @@ body {
   line-height: 1.6;
   color: #333;
 }
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+    .container {
+      width: 80%; /* 80% of parent width */
+      max-width: 1200px; /* Maximum width */
+    }
+    p {
+      font-size: 1.2rem; /* Relative to root font size */
+    }
+
 h1, h2 { color: #00650; }
 
 /* Hero */
