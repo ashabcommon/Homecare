@@ -6,11 +6,29 @@ body {
   color: #333;
 }
    .container {
-   max-width: 1000px;
-   margin: 0 auto;
-   padding: 1rem;
- }
+  max-width: 600px;
+  width: 90%;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
 
+/* Optional tweaks for very small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
 h1, h2 { color: #00650; }
 
 /* Hero */
