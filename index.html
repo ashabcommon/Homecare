@@ -46,10 +46,10 @@
   </section>
   
   <section id="order" class="container order">
-    <p>Please upload your prescription on WhatsApp.</p>
+    <p>Please send your Prescription on WhatsApp.</p>
     <form id="prescription-form">
       <input type="text" name="contact" id="contact" placeholder="Your phone number" required />
-      <button type="submit">Submit on WhatsApp</button>
+      <button type="submit">Send</button>
     </form>
     <div id="feedback"></div>
   </div>
@@ -71,7 +71,7 @@
       );
       const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
       window.open(whatsappURL, "_blank");
-      feedback.innerText = "Thank you for Uploading. We will call you shortly...";
+      feedback.innerText = "Thank you for sending. We will call you shortly to understand your requirements..";
       feedback.style.color = "green";
     });
   </script>
