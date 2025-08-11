@@ -62,13 +62,13 @@
       const feedback = document.getElementById('feedback');
 
       if (!contact) {
-        feedback.innerText = "Please enter your phone number.";
+        feedback.innerText = "Write Your Name.";
         feedback.style.color = "red";
         return;
       }
 
       const encodedMsg = encodeURIComponent(
-        `Hi! I would like to order medicines.\nMy phone number: ${contact}\nPrescription is attached herewith`
+        `Hi! I would like to order medicines.\nMy Name: ${contact}\nPrescription is attached herewith`
       );
       const whatsappURL = `https://wa.me/919403143644?text=${encodedMsg}`;
       window.open(whatsappURL, "_blank");
